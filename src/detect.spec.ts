@@ -48,7 +48,13 @@ describe("detect", () => {
   it("should throw an error when too many phrases are detected using count", () => {
     const text = "blazingly fast detector blazingly fast detector";
 
-    assert.throws(() => detect({ text, throwOverCount: 1 }));
+    assert.throws(() => detect({ text, throwAtCountOrAbove: 1 }));
+  });
+
+  it("should throw an error when too many phrases are detected using count with just one phrase", () => {
+    const text = "blazingly fast detector";
+
+    assert.throws(() => detect({ text, throwAtCountOrAbove: 1 }));
   });
 
   it("should throw an error when too many phrases are detected using percentage", () => {

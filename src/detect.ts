@@ -8,12 +8,12 @@ export type Detected = {
 export function detect({
   text,
   ignorePhrases,
-  throwOverCount,
+  throwAtCountOrAbove,
   throwOverPercentage,
 }: {
   text: string;
   ignorePhrases?: string[];
-  throwOverCount?: number;
+  throwAtCountOrAbove?: number;
   throwOverPercentage?: number;
 }) {
   const phrasesToSearch = ignorePhrases
@@ -40,7 +40,7 @@ export function detect({
   );
 
   const percentage = totalDetectedLength / normalizedText.length;
-  if (throwOverCount && detected.length > throwOverCount) {
+  if (throwAtCountOrAbove && detected.length >= throwAtCountOrAbove) {
     throw new Error("Too many bs phrases detected");
   }
 
