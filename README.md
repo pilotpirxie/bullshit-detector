@@ -72,7 +72,7 @@ Ready to catalyze your communication revolution? Let's ideate on your unique val
 
 Embrace the paradigm shift. Unleash the power of clarity. Become a communication unicorn.
 
-*"60% of the time, it works every time."* - Anchorman
+*"60% of the time, it works every time."* - Brian Fantana, Anchorman
 
 ---
 
