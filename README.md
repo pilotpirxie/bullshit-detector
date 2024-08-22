@@ -21,12 +21,12 @@ const result = detect({ text: "your top-notch content here" });
 you can also customize
 
 ```typescript
-detect({
+{
   text: string; // required, the text to analyze
-  ignorePhrases ? : string[]; // optional, list of phrases to ignore
-  throwOverCount ? : number; // optional, number of jargon words to throw exception
-  throwOverPercentage ? : number; // optional, percentage of jargon words in text to throw exception
-});
+  ignorePhrases? : string[]; // optional, list of phrases to ignore
+  throwOverCount? : number; // optional, number of jargon words to throw exception
+  throwOverPercentage? : number; // optional, percentage of jargon words in text to throw exception
+}
 ```
 
 ## 🔍 Cutting-Edge Features
