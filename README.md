@@ -15,7 +15,19 @@ npm install bullshit-detector
 and then
 
 ```typescript
-const result = detect({ text: "your top-notch content here" });
+const result = detect({
+  text: "blazingly fast top notch detector for fast paced environment workers",
+});
+
+// {
+//   detected: [
+//     { phrase: 'fast paced', index: 38 },
+//     { phrase: 'blazingly fast', index: 0 },
+//     { phrase: 'top notch', index: 15 }
+//   ],
+//   percentage: 0.4852941176470588,
+//   count: 3
+// }
 ```
 
 you can also customize

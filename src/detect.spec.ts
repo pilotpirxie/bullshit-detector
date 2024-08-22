@@ -69,4 +69,26 @@ describe("detect", () => {
     assert.strictEqual(result.detected.length, 0);
     assert.strictEqual(result.percentage, 0);
   });
+
+  it("should detect three phrases", () => {
+    const result = detect({
+      text: "blazingly fast top notch detector for fast paced environment workers",
+    });
+
+    assert.strictEqual(result.detected.length, 3);
+    assert.strictEqual(
+      result.detected.find((d) => d.phrase === "blazingly fast")?.index,
+      0,
+    );
+    assert.strictEqual(
+      result.detected.find((d) => d.phrase === "fast paced")?.index,
+      38,
+    );
+    assert.strictEqual(
+      result.detected.find((d) => d.phrase === "top notch")?.index,
+      15,
+    );
+    assert.strictEqual(result.percentage.toFixed(5), (0.4852941).toFixed(5));
+    assert.strictEqual(result.count, 3);
+  });
 });
