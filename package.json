@@ -1,0 +1,42 @@
+{
+  "name": "bullshit-detector",
+  "version": "1.0.0",
+  "repository": "https://github.com/pilotpirxie/bullshit-detector.git",
+  "author": "pilotpirxie <10637666+pilotpirxie@users.noreply.github.com>",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@types/node": "^18.19.45",
+    "prettier": "3.3.3",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "prettier": "prettier --write .",
+    "build": "tsc",
+    "prepare": "tsc",
+    "test": "time tsc --noEmit && node --import tsx --test ./src/*.spec.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "express",
+    "endpoints",
+    "collection",
+    "api",
+    "rest",
+    "restful",
+    "openapi",
+    "swagger",
+    "zod",
+    "typescript",
+    "ts",
+    "validation",
+    "inference"
+  ]
+}
