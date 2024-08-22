@@ -24,7 +24,7 @@ you can also customize
 {
   text: string; // required, the text to analyze
   ignorePhrases? : string[]; // optional, list of phrases to ignore
-  throwOverCount? : number; // optional, number of jargon words to throw exception
+  throwAtCountOrAbove? : number; // optional, number of jargon words to throw exception
   throwOverPercentage? : number; // optional, percentage of jargon words in text to throw exception
 }
 ```
